@@ -1,0 +1,14 @@
+*.txt
+*.aux
+tmp*
+*.png
+*.eps
+*.log
+*.md
+*.xyz
+*.o
+*.bin
+*.dat
+*.jpeg
+*.jpg
+*.bmp
