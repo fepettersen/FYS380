@@ -11,17 +11,71 @@
 \usepackage{float}
 \usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 
+\renewcommand{\d}{\partial}
+% \renewcommand{\dell}{\nabla}
+
 %opening
-\title{Some title}
+\title{Diffusion Processes in the extracellular space of the brain}
 \author{Fredrik E Pettersen\\ f.e.pettersen@fys.uio.no}
 \begin{document}
 
 \maketitle
 
 \begin{abstract}
-
+This is a project in computational neuroscience based on some 8 articles describing various aspects of diffusion in the extracellular space of the brain. 
 \end{abstract}
 
+\section{Background material}
+\subsection{Basics of the brain}
+The human brain consists of two types of cells; the neurons and neuroglia. 
+Neurons are tasked with signal processing and transport, while the glia are thought to have more janitoral tasks. 
+The neurons are bathed in a salt solution that is mainly $Na^+$ and $Cl^-$. 
+Inside the neurons, a highly regulated salt solution of mainly $K^+$ sets up a potential difference to the outside of around $-65$mV.
+The neurons are in constant communication with eachoter through action potentials, which are disturbances in the membrane potentials on neurons. 
+Theese action potentials are generated in the body of the cell, called the soma, and then propagate down the axon without loss of amplitude. 
+After propagating down the axon, the action potential reaches a synapse which is a gate to another neuron. 
+If the action potential is of significant strength, vesicles carrying neurotransmitters merge with the synapse membrane, letting the neurotransmitters diffuse to the dendrite of the other neuron. 
+If enough neurotransmitters reach the pos-synaptic side, the signal continues propagating to the soma of this neuron, and the entire process starts over again. 
+The interest of this project lies, mainly, in the diffusion processes that take place in the space between theese types on cells, the so-called extracellular space (ECS). 
+This is a narrow space ($\sim 10-100$ nm (Nicholson)) with a highly complicated geometry (figure \ref{ECS}). 
+Surprisingly, the ECS adds up to a total of $20\%$ of the total brain volume. 
+We can understand this by realizing that every part of a cell must be separated from another cell by the ECS. 
+Since the cells consists of axons and dendrites which are (somewhat) fractal, we see that this eventually means separating a vast ammount of surface area from other surface areas.
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[scale=0.8]{brain.jpg}
+ \caption{Electron micrograhp of a small region of the cerebral cortex of a rat with a prominent synapse. 
+ The black areas os the picture indicate the ECS, which may be reduced in size as a conequence of the processing. 
+ The asterix (*) indicates the postsynaptic side of a synapse on a dendrite. 
+ On the other side of the synaptic cleft one can make out the pre-synaptic terminal containing several small, round vesicles filled with neurotransmitter molecules. 
+%  The scale bar under the figure indicates a distance of about 1$\mu$m. 
+ Figure taken from Nicholson.}
+ \label{ECS}
+\end{figure}
+
+The ECS is thought to support the diffusion of oxygen and nutrients to the neurons and glia, and diffusion of carbon dioxide and other waste from theese cells through the blood - brain barrier and into the bloodflow. 
+
+\subsection{Diffusion in general}
+Diffusion is a transport process which in it's well known macroscopic form has been attributed to Adolf Fick. 
+In 1855, building on the earlier experimental work of Graham, Fick formulated the macroscopic law later known as Fick's law
+\begin{equation}
+ \text{flux} = -D\times\text{concentration gradient}
+\end{equation}
+Where $[D] = \frac{m^2}{s}$ is the diffusion constant. Fick's law leads to the well known partial differential equation in the concentration.
+\begin{equation}
+ \frac{\d C}{\d t} = D\nabla^2C
+\end{equation}
+
+Einstein later (1905) proposed the most usefull relation between the diffusion constant and a fluid viscosity $D = \frac{k_B T}{6\pi \eta r}$. 
+There are several relations on this form, relating the diffusion constant to various other easily measurable quantities. 
+The most relevant for the study of diffusion in the ECS would be
+\begin{equation}\label{einstein}
+ \langle r^2\rangle = 2dDt
+\end{equation}
+in the limit of large t (that is in steady state). Equation \ref{einstein} relates the root-mean-square displacement of a particle after a time t (t is large) in a d dimensional space. 
+There are two good reasons to consider the transport mechanisms in the ECS as diffusion processes. 
+First of all, diffusion goes seamlessly from micro to macro scale. In our case, this is perfect since the channels of the ECS are very narrow, but not nececarily narrow enough to consider all the microscopical effects. Second, the geometry of the problem is somewhat similar to diffusion in porous media. TO DO!!!
 
 % Figure - subfigure template (2 by 2 subfigures)
 % \begin{figure}[H]
