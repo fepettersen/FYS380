@@ -1,0 +1,44 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 1.7 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{nicholson2001diffusion}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Nicholson}{N.}%
+     {Charles}{C.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {IOP Publishing}%
+  }
+  \strng{namehash}{NC1}
+  \strng{fullhash}{NC1}
+  \field{sortinit}{N}
+  \field{number}{7}
+  \field{pages}{815}
+  \field{title}{Diffusion and related transport mechanisms in brain tissue}
+  \field{volume}{64}
+  \field{journaltitle}{Reports on progress in Physics}
+  \field{year}{2001}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

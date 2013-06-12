@@ -102,14 +102,10 @@ Since the geometry of the ECS is very narrow, molecules diffusing in this space 
 The diffusing molecules will bounce off cell membranes (we are now considering macromolecules on such a scale that speaking off a cell membrane makes sense) and other molecules. 
 There may even be molecules absorbed by cells, getting stuck onto membranes or going through similar processes. 
 We therefore see it fit to introduce a modified version of the diffusion equation which is more similar to the diffusion equation governing diffusion in porous media. 
-\begin{equation}\label{modified_diffusion}
-  \frac{\d C}{\d t} = D^*\nabla^2C +\frac{s}{\alpha} -k'C
+\begin{equation}
+  \frac{\d C}{\d t} = D*\nabla^2C +\frac{s}{\alpha} -k'C
 \end{equation}
-Where we have introduced an effective diffusion constant $D^*$ defined from the tortuosity, $\lambda = \sqrt{\frac{D}{D^*}}$, which is a parameter saying something about the reduction in the diffusion constant compared to free diffusion (usually measured in a low percentage agar solution in water). 
-The tortuosity can also be interpreted as a measure of the ``twistyness'' of the media in which the diffusion is taking place. 
-$\alpha$ is defined as the relative volume fraction the ECS accounts for, s is a source term, and the $k'C$ term models the uptake of the diffusing molecules by cell membranes etc. 
-Note that equation \ref{modified_diffusion} is only one of several possible equations used to model this kind of diffusion, and that terms accounting for the (now assumed absent \cite{}) bulk flow in the ECS, and other possibly contributing terms, are not included. 
-The model does, however, illustrate the general idea behind the modelling of diffusion in the ECS.
+Where we have introduced an effective diffusion constant $D*$ defined from the tortuosity, $\lambda = \sqrt{\frac{D}{D*}}$
 
 \section{Measurment techniques for brain diffusion characteristics}
 Measurment of the diffusion constant in the ECS can be done in 4 different ways, where one has the obvious advantage of not having to remove the brain from the scull. 

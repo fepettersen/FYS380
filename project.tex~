@@ -105,7 +105,7 @@ We therefore see it fit to introduce a modified version of the diffusion equatio
 \begin{equation}\label{modified_diffusion}
   \frac{\d C}{\d t} = D^*\nabla^2C +\frac{s}{\alpha} -k'C
 \end{equation}
-Where we have introduced an effective diffusion constant $D^*$ defined from the tortuosity, $\lambda = \sqrt{\frac{D}{D^*}}$, which is a parameter saying something about the reduction in the diffusion constant compared to free diffusion (usually measured in a low percentage agar solution in water). 
+Where we have introduced an effective diffusion constant $D*$ defined from the tortuosity, $\lambda = \sqrt{\frac{D}{D^*}}$, which is a parameter saying something about the reduction in the diffusion constant compared to free diffusion (usually measured in a low percentage agar solution in water). 
 The tortuosity can also be interpreted as a measure of the ``twistyness'' of the media in which the diffusion is taking place. 
 $\alpha$ is defined as the relative volume fraction the ECS accounts for, s is a source term, and the $k'C$ term models the uptake of the diffusing molecules by cell membranes etc. 
 Note that equation \ref{modified_diffusion} is only one of several possible equations used to model this kind of diffusion, and that terms accounting for the (now assumed absent \cite{}) bulk flow in the ECS, and other possibly contributing terms, are not included. 
