@@ -1,4 +1,4 @@
-\documentclass[a4paper,english, 10pt, twoside]{article}
+\documentclass[a4paper,english, 12pt, twoside]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
@@ -23,11 +23,13 @@
 \begin{document}
 
 \maketitle
+% \titlepage
 
 \begin{abstract}
 This is a project in computational neuroscience based on some 8 articles describing various aspects of diffusion in the extracellular space of the brain. 
 \end{abstract}
-
+\tableofcontents
+\newpage
 \section{Background material}
 For all practical purposes, the brain of a rat is considered equal to the brain of a human in this project.
 \subsection{Basics of the brain}
@@ -37,11 +39,11 @@ Neurons are tasked with signal processing and transport, while the glia are thou
 The neurons are bathed in a salt solution that is mainly $Na^+$ and $Cl^-$. 
 Inside the neurons, a highly regulated salt solution of mainly $K^+$ sets up a potential difference to the outside of around $-65$mV.
 The neurons are in constant communication with eachoter through action potentials, which are disturbances in the membrane potentials on neurons. 
-Theese action potentials are generated in the body of the cell, called the soma, and then propagate down the axon without loss of amplitude. 
+These action potentials are generated in the body of the cell, called the soma, and then propagate down the axon without loss of amplitude. 
 After propagating down the axon, the action potential reaches a synapse which is a gate to another neuron. 
 If the action potential is of significant strength, vesicles carrying neurotransmitters merge with the synapse membrane, letting the neurotransmitters diffuse to the dendrite of the other neuron. 
 If enough neurotransmitters reach the pos-synaptic side, the signal continues propagating to the soma of this neuron, and the entire process starts over again. 
-The interest of this project lies, mainly, in the diffusion processes that take place in the space between theese types on cells, the so-called extracellular space (ECS). 
+The interest of this project lies, mainly, in the diffusion processes that take place in the space between these types on cells, the so-called extracellular space (ECS). 
 This is a narrow space ($\sim 10-100$ nm \cite{nicholson2001diffusion}) with a highly complicated geometry (figure \ref{ECS}). 
 Surprisingly, the ECS adds up to a total of $20\%$ of the total brain volume. 
 We can understand this by realizing that every part of a cell must be separated from another cell by the ECS. 
@@ -59,7 +61,7 @@ Since the cells consists of axons and dendrites which are (somewhat) fractal, we
  \label{ECS}
 \end{figure}
 
-The ECS is thought to support the diffusion of oxygen and nutrients to the neurons and glia, and diffusion of carbon dioxide and other waste from theese cells through the blood - brain barrier and into the bloodflow. 
+The ECS is thought to support the diffusion of oxygen and nutrients to the neurons and glia, and diffusion of carbon dioxide and other waste from these cells through the blood - brain barrier and into the bloodflow. 
 
 \subsection{Diffusion in general}
 Diffusion is a transport process which in it's well known macroscopic form has been attributed to Adolf Fick. 
@@ -85,7 +87,8 @@ The most relevant for the study of diffusion in the ECS would be
 \end{equation}
 in the limit of large t (that is in steady state). Equation \ref{einstein} relates the root-mean-square displacement of a particle after a time t (t is large) in a d dimensional space. 
 There are two good reasons to consider the transport mechanisms in the ECS as diffusion processes. 
-First of all, diffusion goes seamlessly from micro to macro scale. In our case, this is perfect since the channels of the ECS are very narrow, but not nececarily narrow enough to consider all the microscopical effects. Second, the geometry of the problem is somewhat similar to diffusion in porous media. TO DO!!!
+First of all, diffusion goes seamlessly from micro to macro scale. In our case, this is perfect since the channels of the ECS are very narrow, but not nececarily narrow enough to consider all the microscopical effects. Second, the geometry of the problem is somewhat similar to diffusion in porous media.\\
+TO DO!!!
 
 \subsection{Why diffusion in ECS}
 Though there are several reasons to study diffusion processes in the ECS this project has a specific goal in mind. 
@@ -93,19 +96,23 @@ The einstein relation \ref{einstein_viscosity} relates the diffusion constant to
 From the definition of viscosity we have $v_d = \mu F$ where $F = qE$. 
 We can also define the current from the drift velocity of the particles as $j = cqv_d = \sigma E$ where $\sigma = c\mu q^2$ is the electrical conductance, in this case, of the ECS. 
 Inserting this in the einstein relation \ref{einstein_viscosity} lets us express the conductivity in terms of the diffusion constant $\sigma = \frac{cq}{k_B T}D$. 
-We are interrested in the extracellular conductance for measurment purposes. 
+We are interrested in the extracellular conductance for measurment purposes. \\
 TO DO!! SAY SOMETHING ABOUT NETWORK MODELS?
 
 \section{Mathematical models}
-There diffusion in the ECS is, of course, modelled by a diffusion equation, but rather a modified one than the basic diffusion equation \ref{diffusion_eq}. 
+Diffusion in the ECS is, naturally, modelled by a diffusion equation, but rather a modified one than the basic diffusion equation \ref{diffusion_eq}. 
 Since the geometry of the ECS is very narrow, molecules diffusing in this space will not be subject to free diffusion, as the normal diffusion equation assumes. 
 The diffusing molecules will bounce off cell membranes (we are now considering macromolecules on such a scale that speaking off a cell membrane makes sense) and other molecules. 
 There may even be molecules absorbed by cells, getting stuck onto membranes or going through similar processes. 
 We therefore see it fit to introduce a modified version of the diffusion equation which is more similar to the diffusion equation governing diffusion in porous media. 
-\begin{equation}
-  \frac{\d C}{\d t} = D*\nabla^2C +\frac{s}{\alpha} -k'C
+\begin{equation}\label{modified_diffusion}
+  \frac{\d C}{\d t} = D^*\nabla^2C +\frac{s}{\alpha} -k'C
 \end{equation}
-Where we have introduced an effective diffusion constant $D*$ defined from the tortuosity, $\lambda = \sqrt{\frac{D}{D*}}$
+Where we have introduced an effective diffusion constant $D^*$ defined from the tortuosity, $\lambda = \sqrt{\frac{D}{D^*}}$, which is a parameter saying something about the reduction in the diffusion constant compared to free diffusion (usually measured in a low percentage agar solution in water). 
+The tortuosity can also be interpreted as a measure of the ``twistyness'' of the media in which the diffusion is taking place. 
+$\alpha$ is defined as the relative volume fraction the ECS accounts for, s is a source term, and the $k'C$ term models the uptake of the diffusing molecules by cell membranes etc. 
+Note that equation \ref{modified_diffusion} is only one of several possible equations used to model this kind of diffusion, and that terms accounting for the (now assumed absent \cite{}) bulk flow in the ECS, and other possibly contributing terms, are not included. 
+The model does, however, illustrate the general idea behind the modelling of diffusion in the ECS.
 
 \section{Measurment techniques for brain diffusion characteristics}
 Measurment of the diffusion constant in the ECS can be done in 4 different ways, where one has the obvious advantage of not having to remove the brain from the scull. 
@@ -113,16 +120,49 @@ For in vitro measurments there main types of measurment are optical, and ionsens
 \subsection{Optical measurments}
 
 \subsection{TMA$^+$ measurments}
+All TMA measurments are usually done on brain slices kept under well controlled conditions. 
+Though the method is invasive, it does not have to be done in vitro, but an in vivo measurment requires anesthetized animals and a lot of skill!\\
+Tetramethylammonium (TMA$^+$) is the simplest quaternary ammonium cation consisting of four methyl groups attached to a central nitrogen atom, and is positively charged. 
+Measurments using TMA$^+$ rely on the controlled release of very small ammounts of TMA from a micropipette (using for example pressure ejection) into the tissue of interest, and measuring the corresponding concentration change some distance away (usually $\sim100\mu$m). 
+The change in concentration is measured by an appropriate ion-selective microelectrode. 
+Using ion-selective microelectrodes we can mesure the TMA concentration in time as well as space with the real time iontophoresis (RTI) method developed by Nicholson and Phillips in 1981 \cite{} and get a resolution of the order of a minute.\\
+Within the realm of TMA measurments there are a few varieties. 
+As suggested, we can measure both the spatial concentration distribution, making an analogous method to the radiotracer method. 
+One can also utilize the RTI methos to get a time resolution as well as a spatial one. 
+A third possible method was developed by Chen and Nicholson in 2002 \cite{chen2002measurement} using a sinusoidal source. 
+Because the ions have to diffuse to the probe we will measure a phase lag in the oscillating steady state solution at the microelectrode. 
 
 \subsection{Radiotracer methods}
 The radiotracer methods are perhaps the most intuitive methods for measuring diffusion characteristics in the ECS, and were also the first methods applied quantitatively (1962 \cite{}). 
+Although the method is not generally in use today because it requires interaction with radioactive substances (which one now tend to limit), the results of these early experiments are still used as verification because they offer an independent reference and the method is still sound. 
+The basic method is to perfuse the bilateral ventriculoscisternal cavities of an anesthetized animal, usually a dog or monkey, with a radiolabeled probe molecule for a longer period. Often several hours. 
+After this period was over, the brain of the animal was quickly removed, frozen and sliced at $0.4-1$ mm thickness parallel to the perfusion. 
+One could now measure the spatial distribution of radioactivity in each slice to determine the diffusion parameters $D^*$ and $\alpha$. 
+As mentioned, modern health and safety measures limits the interaction with radioactive substances. 
+It is also more and more frowned upon to use larger animals, like monkeys, in these kinds of experiments, and the TMA$^+$ measurments are just as good. 
+The radiotracer methods are therefore not commonly used today.
 
 \subsection{Diffusion Tensor Imaging}
 This is a non-invasive measurment which has its obvious advantages in it's ability to be used on living humans. 
 Diffusion tensor magnetic resonance imaging (DTI) is, as the name suggests, a type of magnetic resonance imaging. 
-It measures the selfdiffusion tensor of water molecules in the ECS using six or more gradients. 
+In isotropic media, the diffusion process is fully described by a single scalar coefficient, the diffusion constant. 
+With isotropy we mean that the medium in which the diffusion process is taking place is uniform in all directions which means that the diffusion will be equal in all directions. 
+The ECS, however (and tissue in general) is anisotropic. 
+In the presence of anisotropy, diffusion can no longer be characterized by a single scalar constant, but requires a tensor $\mathbf{D}$, which fully describes the mobility along each direction and the correlation between these directions \cite{le2001diffusion}. 
+The diffusion tensor is given in \ref{diffuion_tensor}. We notice that it must be symmetric, meaning that we have $D_{ij} = D_{ji}$
+.DTI measures the self diffusion tensor of water molecules in the ECS using six or more gradients. 
 
+\section{Other possible methods}
+In this part we will briefly look to other fields of study which might have similar problems to solve. 
+The main issues of the established models for simulating diffusion in the ECS is the length scale on which it happens. 
+The einstein relation is (to my knowledge) only derived in homogenous media, which means that 
+\subsection{Random walks/flow on a percolating cluster}
 
+\subsection{Molecular dynamics}
+
+\subsection{Dissipative fluid dynamics}
+
+\section{Conclusion}
 % Figure - subfigure template (2 by 2 subfigures)
 % \begin{figure}[H]
 % \centering

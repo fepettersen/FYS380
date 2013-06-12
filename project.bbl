@@ -16,6 +16,86 @@
   {}
 \endgroup
 
+\entry{chen2002measurement}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Chen}{C.}%
+     {Kevin~C}{K.~C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Nicholson}{N.}%
+     {Charles}{C.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Elsevier}%
+  }
+  \strng{namehash}{CKCNC1}
+  \strng{fullhash}{CKCNC1}
+  \field{sortinit}{C}
+  \field{number}{1}
+  \field{pages}{97\bibrangedash 108}
+  \field{title}{{Measurement of diffusion parameters using a sinusoidal
+  iontophoretic source in rat cortex}}
+  \field{volume}{122}
+  \field{journaltitle}{Journal of Neuroscience Methods}
+  \field{year}{2002}
+\endentry
+
+\entry{le2001diffusion}{article}{}
+  \name{author}{7}{}{%
+    {{}%
+     {{Le Bihan}}{L.}%
+     {Denis}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Mangin}{M.}%
+     {Jean-Fran\c{c}ois}{J.-F.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Poupon}{P.}%
+     {Cyril}{C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Clark}{C.}%
+     {Chris~A}{C.~A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Pappata}{P.}%
+     {Sabina}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Molko}{M.}%
+     {Nicolas}{N.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Chabriat}{C.}%
+     {Hughes}{H.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Wiley Online Library}%
+  }
+  \strng{namehash}{LD+1}
+  \strng{fullhash}{LDMJFPCCCAPSMNCH1}
+  \field{sortinit}{L}
+  \field{number}{4}
+  \field{pages}{534\bibrangedash 546}
+  \field{title}{Diffusion tensor imaging: concepts and applications}
+  \field{volume}{13}
+  \field{journaltitle}{Journal of magnetic resonance imaging}
+  \field{year}{2001}
+\endentry
+
 \entry{nicholson2001diffusion}{article}{}
   \name{author}{1}{}{%
     {{}%
