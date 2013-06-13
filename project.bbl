@@ -44,6 +44,32 @@
   \field{year}{2002}
 \endentry
 
+\entry{hrabetova2004contribution}{article}{}
+  \true{moreauthor}
+  \name{author}{2}{}{%
+    {{}%
+     {Hrabetov{\'a}}{H.}%
+     {Sabina}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Nicholson}{N.}%
+     {Charles}{C.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HSNC+1}
+  \strng{fullhash}{HSNC+1}
+  \field{sortinit}{H}
+  \field{number}{4}
+  \field{pages}{467}
+  \field{title}{Contribution of dead-space microdomains to tortuosity of brain
+  extracellular space.}
+  \field{volume}{45}
+  \field{journaltitle}{Neurochemistry international}
+  \field{year}{2004}
+\endentry
+
 \entry{le2001diffusion}{article}{}
   \name{author}{7}{}{%
     {{}%
@@ -116,6 +142,34 @@
   \field{volume}{64}
   \field{journaltitle}{Reports on progress in Physics}
   \field{year}{2001}
+\endentry
+
+\entry{nicholson1993hindered}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Nicholson}{N.}%
+     {Charles}{C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Tao}{T.}%
+     {Lian}{L.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Elsevier}%
+  }
+  \strng{namehash}{NCTL1}
+  \strng{fullhash}{NCTL1}
+  \field{sortinit}{N}
+  \field{number}{6}
+  \field{pages}{2277\bibrangedash 2290}
+  \field{title}{Hindered diffusion of high molecular weight compounds in brain
+  extracellular microenvironment measured with integrative optical imaging}
+  \field{volume}{65}
+  \field{journaltitle}{Biophysical journal}
+  \field{year}{1993}
 \endentry
 
 \lossort

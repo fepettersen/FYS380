@@ -96,7 +96,7 @@ The einstein relation \ref{einstein_viscosity} relates the diffusion constant to
 From the definition of viscosity we have $v_d = \mu F$ where $F = qE$. 
 We can also define the current from the drift velocity of the particles as $j = cqv_d = \sigma E$ where $\sigma = c\mu q^2$ is the electrical conductance, in this case, of the ECS. 
 Inserting this in the einstein relation \ref{einstein_viscosity} lets us express the conductivity in terms of the diffusion constant $\sigma = \frac{cq}{k_B T}D$. 
-We are interrested in the extracellular conductance for measurment purposes. \\
+We are interrested in the extracellular conductance for measurement purposes. \\
 TO DO!! SAY SOMETHING ABOUT NETWORK MODELS?
 
 \section{Mathematical models}
@@ -111,22 +111,37 @@ We therefore see it fit to introduce a modified version of the diffusion equatio
 Where we have introduced an effective diffusion constant $D^*$ defined from the tortuosity, $\lambda = \sqrt{\frac{D}{D^*}}$, which is a parameter saying something about the reduction in the diffusion constant compared to free diffusion (usually measured in a low percentage agar solution in water). 
 The tortuosity can also be interpreted as a measure of the ``twistyness'' of the media in which the diffusion is taking place. 
 $\alpha$ is defined as the relative volume fraction the ECS accounts for, s is a source term, and the $k'C$ term models the uptake of the diffusing molecules by cell membranes etc. 
-Note that equation \ref{modified_diffusion} is only one of several possible equations used to model this kind of diffusion, and that terms accounting for the (now assumed absent \cite{}) bulk flow in the ECS, and other possibly contributing terms, are not included. 
+Note that equation \ref{modified_diffusion} is only one of several possible equations used to model this kind of diffusion, and that terms accounting for the (now assumed absent \cite{nicholson2001diffusion}) bulk flow in the ECS, and other possibly contributing terms, are not included. 
 The model does, however, illustrate the general idea behind the modelling of diffusion in the ECS.
 
-\section{Measurment techniques for brain diffusion characteristics}
-Measurment of the diffusion constant in the ECS can be done in 4 different ways, where one has the obvious advantage of not having to remove the brain from the scull. 
-For in vitro measurments there main types of measurment are optical, and ionsensitive microprobes. 
-\subsection{Optical measurments}
+\subsection{Numerical simulations of tortuosity}
+In 2003 Hrab\v{e}tov\'{a} and Nicholson conducted numerical simulations of diffusion in an artificial, porous 3D media to determine the tortuosity, $\lambda$, as a function of the volume fraction, $\alpha$ \cite{hrabetova2004contribution}. 
+The ECS was modeled as the gaps between geometric figures, starting with cubes and advancing to more complicated shapes (see figure \ref{geometries}). 
+The models all have a regular spacing in common. \\
+In their simulations 
 
-\subsection{TMA$^+$ measurments}
-All TMA measurments are usually done on brain slices kept under well controlled conditions. 
-Though the method is invasive, it does not have to be done in vitro, but an in vivo measurment requires anesthetized animals and a lot of skill!\\
+\section{Measurement techniques for brain diffusion characteristics}
+Measurement of the diffusion constant in the ECS can be done in 4 different ways, where one has the obvious advantage of not having to remove the brain from the scull. 
+For in vitro measurements there main types of measurement are optical, and ionsensitive microprobes. 
+
+\subsection{Optical measurements}
+In 1993 Nicholson and Tao developed a new method, the integrative optical imaging (IOI) method, to measure diffusion properties in the ECS \cite{nicholson1993hindered} \cite{nicholson2001diffusion}. 
+The basic approach is to eject a small volume ($\sim 1$nL or less) of macromolecules labelled with a fluorescent tag into the tissue of interest (here the ECS), and record the spatial distribution of these molecules by a cooled charge-coupled device (CCD) camera every few seconds. 
+This method also (naturally) requires the use of a microscope. 
+The CCD camera transfers the pictures to a computer which calculates the effective diffusion constant. 
+A comparison with unhindered diffusion is required as it is for the TMA measurments also. \\
+The IOI method has proved to work rather well, but it has one fundamental problem to overcome; the camera only takes pictures in 2d, and hence the slices used for these measurements must be optically thin. 
+A further complication of this is that the diffusion should happen in 3d, but will be limited. 
+On a brighter note, the uptake term in equation \ref{modified_diffusion} is assumed to be zero ($k' = 0$) since the molecules are so large.
+
+\subsection{TMA$^+$ measurements}
+All TMA measurements are usually done on brain slices kept under well controlled conditions. 
+Though the method is invasive, it does not have to be done in vitro, but an in vivo measurement requires anesthetized animals and a lot of skill!\\
 Tetramethylammonium (TMA$^+$) is the simplest quaternary ammonium cation consisting of four methyl groups attached to a central nitrogen atom, and is positively charged. 
-Measurments using TMA$^+$ rely on the controlled release of very small ammounts of TMA from a micropipette (using for example pressure ejection) into the tissue of interest, and measuring the corresponding concentration change some distance away (usually $\sim100\mu$m). 
+Measurements using TMA$^+$ rely on the controlled release of very small ammounts of TMA from a micropipette (using for example pressure ejection) into the tissue of interest, and measuring the corresponding concentration change some distance away (usually $\sim100\mu$m). 
 The change in concentration is measured by an appropriate ion-selective microelectrode. 
 Using ion-selective microelectrodes we can mesure the TMA concentration in time as well as space with the real time iontophoresis (RTI) method developed by Nicholson and Phillips in 1981 \cite{} and get a resolution of the order of a minute.\\
-Within the realm of TMA measurments there are a few varieties. 
+Within the realm of TMA measurements there are a few varieties. 
 As suggested, we can measure both the spatial concentration distribution, making an analogous method to the radiotracer method. 
 One can also utilize the RTI methos to get a time resolution as well as a spatial one. 
 A third possible method was developed by Chen and Nicholson in 2002 \cite{chen2002measurement} using a sinusoidal source. 
@@ -139,20 +154,28 @@ The basic method is to perfuse the bilateral ventriculoscisternal cavities of an
 After this period was over, the brain of the animal was quickly removed, frozen and sliced at $0.4-1$ mm thickness parallel to the perfusion. 
 One could now measure the spatial distribution of radioactivity in each slice to determine the diffusion parameters $D^*$ and $\alpha$. 
 As mentioned, modern health and safety measures limits the interaction with radioactive substances. 
-It is also more and more frowned upon to use larger animals, like monkeys, in these kinds of experiments, and the TMA$^+$ measurments are just as good. 
+It is also more and more frowned upon to use larger animals, like monkeys, in these kinds of experiments, and the TMA$^+$ measurements are just as good or better. 
 The radiotracer methods are therefore not commonly used today.
 
 \subsection{Diffusion Tensor Imaging}
-This is a non-invasive measurment which has its obvious advantages in it's ability to be used on living humans. 
+This is a non-invasive measurement which has its obvious advantages in it's ability to be used on living humans. 
 Diffusion tensor magnetic resonance imaging (DTI) is, as the name suggests, a type of magnetic resonance imaging. 
 In isotropic media, the diffusion process is fully described by a single scalar coefficient, the diffusion constant. 
 With isotropy we mean that the medium in which the diffusion process is taking place is uniform in all directions which means that the diffusion will be equal in all directions. 
 The ECS, however (and tissue in general) is anisotropic. 
 In the presence of anisotropy, diffusion can no longer be characterized by a single scalar constant, but requires a tensor $\mathbf{D}$, which fully describes the mobility along each direction and the correlation between these directions \cite{le2001diffusion}. 
-The diffusion tensor is given in \ref{diffuion_tensor}. We notice that it must be symmetric, meaning that we have $D_{ij} = D_{ji}$
-.DTI measures the self diffusion tensor of water molecules in the ECS using six or more gradients. 
+The diffusion tensor is given in \ref{diffuion_tensor}. We notice that it must be symmetric, meaning that we have $D_{ij} = D_{ji}$.
+\begin{align}\label{diffuion_tensor}
+ \mathbf{D} = \left(\begin{array}{ccc}
+                     D_{xx} & D_{xy} & D_{xz}\\
+                     D_{yx} & D_{yy} & D_{yz}\\
+                     D_{zx} & D_{zy} & D_{zz}
+                    \end{array}\right)
+\end{align}
 
-\section{Other possible methods}
+DTI measures the self diffusion tensor of water molecules in the ECS using six or more gradients. 
+
+\section{Other possible modeling approaches}
 In this part we will briefly look to other fields of study which might have similar problems to solve. 
 The main issues of the established models for simulating diffusion in the ECS is the length scale on which it happens. 
 The einstein relation is (to my knowledge) only derived in homogenous media, which means that 
@@ -160,9 +183,8 @@ The einstein relation is (to my knowledge) only derived in homogenous media, whi
 
 \subsection{Molecular dynamics}
 
-\subsection{Dissipative fluid dynamics}
 
-\section{Conclusion}
+\section{Outlook}
 % Figure - subfigure template (2 by 2 subfigures)
 % \begin{figure}[H]
 % \centering
