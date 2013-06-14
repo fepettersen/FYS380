@@ -31,9 +31,11 @@
 \tableofcontents
 \newpage
 \section{Introduction}
-This is a project in computational neuroscience based on some 8 articles describing various aspects of diffusion in the extracellular space of the brain. 
-The aim of the project is more or less to be an introduction into the models describing diffusion processes in the Extracellular space of the brain, a space in which many important processes takes place. 
-Among them are the delivery of nutrients and drugs to the brain-cells (specified later), as well as ion transport essential to the communication processes between brain-cells.
+This is a project in computational neuroscience based on some eight articles describing various aspects of diffusion in the extracellular space of the brain. 
+The aim of the project is more or less to be an introduction to the models describing diffusion processes in the extracellular space of the brain, a space in which many important processes takes place. 
+Among them are the delivery of nutrients and drugs to the brain-cells (specified later), as well as ion transport essential to the communication processes between brain-cells. 
+The project starts with briefly introducing neuroscience in general and motivating the theme, before summing up the most important models and measurement techniques availible (in the early 2000's). 
+We will also point out some other fields of modern physics that are quite similar to the problem at hand.
 
 \section{Background material}
 For all practical purposes, the brain of a rat is considered equal to the brain of a human in this project.
@@ -42,27 +44,27 @@ For all practical purposes, the brain of a rat is considered equal to the brain 
 The human brain consists of two types of cells; the neurons and neuroglia. 
 Neurons are tasked with signal processing and transport, while the glia are thought to have more janitoral tasks. 
 The neurons are bathed in a salt solution that is mainly $Na^+$ and $Cl^-$. 
-Inside the neurons, a highly regulated salt solution of mainly $K^+$ sets up a potential difference relative to the outside of the cell of around $-65$mV.
-The neurons are in constant communication with each other through action potentials, which are disturbances in the membrane potentials on neurons. 
-These action potentials are generated in the body of the cell, called the soma, and then propagate down the axon without loss of amplitude. 
+Inside the neurons, a highly regulated salt solution of mainly $K^+$ sets up a potential difference relative to the outside of the cell of approximately $-65$mV.
+The neurons are in constant communication with each other through action potentials, which are disturbances in the membrane potentials of neurons. 
+These action potentials are generated in the body of the cell, called the soma, from where they propagate down the axon without loss of amplitude. 
 This is achieved by constantly amplifying the signal using ion pumps (see the Hodgin-Huxley model of the action potential).
 After propagating down the axon, the action potential reaches a synapse which is a gate to another neuron. 
 If the action potential is of significant strength, vesicles carrying neurotransmitters merge with the synapse membrane, letting the neurotransmitters diffuse to the dendrite of the other neuron. 
 If enough neurotransmitters reach the post-synaptic side, the signal continues propagating to the soma of this neuron, and the entire process starts over again. \\
-The interest of this project lies, mainly, in the diffusion processes that take place in the space between these types on cells, the so-called extracellular space (ECS). 
-This is a narrow space ($\sim 10-100$ nm \cite{nicholson2001diffusion}) with a highly complicated geometry (figure \ref{ECS}). 
-Surprisingly, the ECS adds up to a total of $20\%$ of the total brain volume. 
+The interest of this project lies, mainly, in the diffusion processes that take place in the space between these types of cells, the so-called extracellular space (ECS). 
+This is a narrow space ($\sim 10-100$ nm \cite{nicholson2001diffusion}) with a highly complicated geometry (Figure \ref{ECS}). 
+Surprisingly, the ECS adds up to $20\%$ of the total brain volume. 
 We can understand this by realizing that every part of a cell must be separated from another cell by the ECS. 
-Since the cells consists of axons and dendrites which can be viewed as (somewhat) fractal, we see that this eventually means separating a vast ammount of surface area from other surface areas.
+Since the cells consists of axons and dendrites which can be viewed as (somewhat) fractal, we see that this means separating a vast amount of surface area from other surface areas.
 
 \begin{figure}[H]
  \centering
- \includegraphics[scale=0.8]{brain.jpg}
- \caption{Electron micrograhp of a small region of the cerebral cortex of a rat with a prominent synapse. 
- The black areas os the picture indicate the ECS, which may be reduced in size as a conequence of the processing. 
+ \includegraphics[width=\textwidth]{brain.png}
+ \caption{Electron micrograph of a small region of the cerebral cortex of a rat with a prominent synapse. 
+ The black areas of the picture indicate the ECS, which may be reduced in size as a consequence of the processing which prepare the sample for the micrograph. 
  The asterix (*) indicates the postsynaptic side of a synapse on a dendrite. 
  On the other side of the synaptic cleft one can make out the pre-synaptic terminal containing several small, round vesicles filled with neurotransmitter molecules. 
-%  The scale bar under the figure indicates a distance of about 1$\mu$m. 
+ The scale bar under the figure indicates a distance of about 1$\mu$m. 
  Figure taken from Nicholson \cite{nicholson2001diffusion}.}
  \label{ECS}
 \end{figure}
@@ -70,68 +72,69 @@ Since the cells consists of axons and dendrites which can be viewed as (somewhat
 The ECS is thought to support the diffusion of oxygen and nutrients to the neurons and glia, and diffusion of carbon dioxide and other waste from these cells through the blood - brain barrier and into the bloodflow. 
 
 \subsection{Diffusion in general}
-Diffusion is a transport process which in it's well known macroscopic form has been attributed to Adolf Fick. 
+Diffusion is a transport process which in its well known macroscopic form has been attributed to Adolf Fick. 
 In 1855, building on the earlier experimental work of Graham, Fick formulated the macroscopic law later known as Fick's law
 \begin{equation}
  \text{flux} = -D\times\text{concentration gradient}
 \end{equation}
-Where $[D] = \frac{m^2}{s}$ is the diffusion constant. Fick's law leads to the well known partial differential equation in the concentration.
+Where $[D] = \frac{m^2}{s}$ is the diffusion constant. Fick's law leads to the well known partial differential equation in the concentration, C.
 \begin{equation}\label{diffusion_eq}
  \frac{\d C}{\d t} = D\nabla^2C
 \end{equation}
 
-Einstein later (1905) proposed the most usefull relation between the diffusion constant and a fluid viscosity 
+Einstein later (1905) proposed the most useful relation between the diffusion constant and a fluid viscosity; 
 \begin{equation}\label{einstein_viscosity}
-D = \frac{k_B T}{6\pi \eta r}
+D = \frac{k_B T}{6\pi \eta r},
 \end{equation}
-
-.
+where T is the temperature, $k_B$ is Boltzmann's constant, $\eta$ is the fluid viscosity with units $[\eta] = m^2s^{-1}$.
 There are several relations on this form, relating the diffusion constant to various other easily measurable quantities. 
-The most relevant for the study of diffusion in the ECS would be
+The most relevant relation for the study of diffusion in the ECS would be
 \begin{equation}\label{einstein}
  \langle r^2\rangle = 2dDt
 \end{equation}
-in the limit of large t (that is in steady state). Equation \ref{einstein} relates the root-mean-square displacement of a particle after a time t (t is large) in a d dimensional space. 
+in the limit of large t (that is in steady state). 
+Equation \ref{einstein} relates the root-mean-square displacement of a particle after a time t (where t is large) in a d dimensional space. 
 There are two good reasons to consider the transport mechanisms in the ECS as diffusion processes. 
-First of all, diffusion goes seamlessly from micro to macro scale. In our case, this is perfect since the channels of the ECS are very narrow, but not nececarily narrow enough to consider all the microscopical effects. Second, the geometry of the problem is somewhat similar to diffusion in porous media.\\
-TO DO!!!
+Firstly, diffusion goes seamlessly from micro to macro scale. 
+In our case, this is perfect since the channels of the ECS are very narrow, but not nececarily narrow enough to consider all the microscopical effects. 
+Second, the geometry of the problem is somewhat similar to diffusion in porous media.\\
 
-\subsection{Why diffusion in ECS}
+\subsection{Why diffusion in the extracellular space}
 Though there are several reasons to study diffusion processes in the ECS this project has a specific goal in mind. 
-The einstein relation \ref{einstein_viscosity} relates the diffusion constant to the viscosity of the medium in which the diffusion is taking place. 
+The Einstein relation, eq. (\ref{einstein_viscosity}), relates the diffusion constant to the viscosity of the medium in which the diffusion is taking place. 
 From the definition of viscosity, $\mu$, we have 
 \begin{equation}
 v_d = \mu F 
 \end{equation}
-where $F = qE$ is the standard electical force acting on a charged particle. 
+where $F = qE$ is the standard electrical force acting on a charged particle. 
 We can also define the current from the drift velocity of the particles as 
 \begin{equation}
-j = cqv_d = \sigma E 
+J = cqv_d = \sigma E 
 \end{equation}
 where $\sigma = c\mu q^2$ is the electrical conductance, in this case, of the ECS. 
-Inserting this in the einstein relation \ref{einstein_viscosity} lets us express the conductivity in terms of the diffusion constant 
+Inserting this in the Einstein relation, eq. (\ref{einstein_viscosity}), lets us express the conductivity in terms of the diffusion constant as 
 \begin{equation}\label{sigma}
 \sigma = \frac{cq}{k_B T}D 
 \end{equation}
-Equation \ref{sigma} is trivially generalizable to tensor notation, where the conductance and diffusion ``constant'' are both 2. order tensors.\\
-We are interrested in the extracellular conductance for measurement purposes. 
+Equation (\ref{sigma}) is trivially generalizable to tensor notation, where the conductance and diffusion ``constant'' are both 2. order tensors.\\
+We are interested in the extracellular conductance for measurement purposes. 
 An important goal in the field of computational neuroscience is to model networks of neurons on such scale that the network can resemble an actual brain. 
-This poses a lot of challenges, the shear number of neurons in the neocortex ($\sim 17$ billion) being one of them. 
+This poses many challenges, the sheer number of neurons in the neocortex ($\sim 17$ billion) being one of them. 
 To date, the largest system simulated is said to resemble the brain of a cat, but the low complexity of the model neurons makes the real similarity to a cat brain questionable. \\
-To verify the network models, they are (among other things) related to measurments of local field potentials (LFP) in the ECS. 
-When signals pass through neurons, they will echo into the ECS and create measureable potentials which vary strongly in space. 
-For a single neuron consisting of N compartments, the LFP is found by suming the contributions from each compartment, as illustrated in equation \ref{LFP_simple}. 
+To verify the network models, they are (among other things) related to measurements of local field potentials (LFP) in the ECS. 
+When signals pass through neurons, they will echo into the ECS and create measurable potentials which vary strongly in space. 
+For a single neuron consisting of N compartments, the LFP is found by summing the contributions from each compartment, as we see from eq. (\ref{LFP_simple}). 
 This formula relies on a set of approximations: The first is the use of the quasistatic approximation of Maxwell's equations, meaning that the electical an magnetic fields are effectively decoupled. 
 This approximation is to a large degree fulfilled for the frequencies inherent in neural activity (less than $\sim 10^3$Hz). 
 Further, the electrical conductivity in the ECS, $\sigma$, is assumed ohmic, frequency independent, homogenous and isotropic, meaning that it is the same in all directions. 
-The last assumptions can be dropped, making the conductivity a 2. order tensor.
+The last two assumptions can be dropped, making the conductivity a 2. order tensor.
 \begin{equation}\label{LFP_simple}
  \phi(\mathbf{r},t) = \frac{1}{4\pi\sigma}\sum\limits_{n=1}^N\frac{I_n(t)}{|\mathbf{r}-\mathbf{r_n}|}
 \end{equation}
 When we include more than one neuron we will also need to introduce the current source density (CSD), $C(\mathbf{r},t)$, which is a coarse-grained measure of the net volume density of transmembrane current entering or leaving the ECS. 
-Setting $C(\mathbf{r},t) = \sum I_n\delta^3(\mathbf{r}-\mathbf{r_n})$ now gives us a relation between the LFP and CSD if we insert the expression for CSD into equation \ref{LFP_simple}.
+Setting $C(\mathbf{r},t) = \sum I_n\delta^3(\mathbf{r}-\mathbf{r_n})$ now gives us a relation between the LFP and CSD if we insert the expression for CSD into eq. (\ref{LFP_simple}).
 \begin{equation}\label{LFP_modified}
-  \phi(\mathbf{r},t) = \frac{1}{4\pi\sigma}\iiint\limits_{V}\frac{C(\mathbf{r'},t)}{|\mathbf{r}-\mathbf{r'}|}d^3r'
+  \phi(\mathbf{r},t) = \frac{1}{4\pi\sigma}\iiint_{V}\frac{C(\mathbf{r'},t)}{|\mathbf{r}-\mathbf{r'}|}d^3r'
 \end{equation}
 Notice that $\delta^3(\mathbf{r})$ denotes the three-dimensional Dirac-delta function. 
 Equation \ref{LFP_modified} still requires the conductivity to be scalar, but can be rewritten to provide the opposite relationship. 
