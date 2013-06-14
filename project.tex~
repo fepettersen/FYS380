@@ -103,12 +103,40 @@ We can also define the current from the drift velocity of the particles as
 \begin{equation}
 j = cqv_d = \sigma E 
 \end{equation}
- 
-
 where $\sigma = c\mu q^2$ is the electrical conductance, in this case, of the ECS. 
-Inserting this in the einstein relation \ref{einstein_viscosity} lets us express the conductivity in terms of the diffusion constant $\sigma = \frac{cq}{k_B T}D$. 
-We are interrested in the extracellular conductance for measurement purposes. \\
-TO DO!! SAY SOMETHING ABOUT NETWORK MODELS?
+Inserting this in the einstein relation \ref{einstein_viscosity} lets us express the conductivity in terms of the diffusion constant 
+\begin{equation}\label{sigma}
+\sigma = \frac{cq}{k_B T}D 
+\end{equation}
+Equation \ref{sigma} is trivially generalizable to tensor notation, where the conductance and diffusion ``constant'' are both 2. order tensors.\\
+We are interrested in the extracellular conductance for measurement purposes. 
+An important goal in the field of computational neuroscience is to model networks of neurons on such scale that the network can resemble an actual brain. 
+This poses a lot of challenges, the shear number of neurons in the neocortex ($\sim 17$ billion) being one of them. 
+To date, the largest system simulated is said to resemble the brain of a cat, but the low complexity of the model neurons makes the real similarity to a cat brain questionable. \\
+To verify the network models, they are (among other things) related to measurments of local field potentials (LFP) in the ECS. 
+When signals pass through neurons, they will echo into the ECS and create measureable potentials which vary strongly in space. 
+For a single neuron consisting of N compartments, the LFP is found by suming the contributions from each compartment, as illustrated in equation \ref{LFP_simple}. 
+This formula relies on a set of approximations: The first is the use of the quasistatic approximation of Maxwell's equations, meaning that the electical an magnetic fields are effectively decoupled. 
+This approximation is to a large degree fulfilled for the frequencies inherent in neural activity (less than $\sim 10^3$Hz). 
+Further, the electrical conductivity in the ECS, $\sigma$, is assumed ohmic, frequency independent, homogenous and isotropic, meaning that it is the same in all directions. 
+The last assumptions can be dropped, making the conductivity a 2. order tensor.
+\begin{equation}\label{LFP_simple}
+ \phi(\mathbf{r},t) = \frac{1}{4\pi\sigma}\sum\limits_{n=1}^N\frac{I_n(t)}{|\mathbf{r}-\mathbf{r_n}|}
+\end{equation}
+When we include more than one neuron we will also need to introduce the current source density (CSD), $C(\mathbf{r},t)$, which is a coarse-grained measure of the net volume density of transmembrane current entering or leaving the ECS. 
+Setting $C(\mathbf{r},t) = \sum I_n\delta^3(\mathbf{r}-\mathbf{r_n})$ now gives us a relation between the LFP and CSD if we insert the expression for CSD into equation \ref{LFP_simple}.
+\begin{equation}\label{LFP_modified}
+  \phi(\mathbf{r},t) = \frac{1}{4\pi\sigma}\iiint\limits_{V}\frac{C(\mathbf{r'},t)}{|\mathbf{r}-\mathbf{r'}|}d^3r'
+\end{equation}
+Notice that $\delta^3(\mathbf{r})$ denotes the three-dimensional Dirac-delta function. 
+Equation \ref{LFP_modified} still requires the conductivity to be scalar, but can be rewritten to provide the opposite relationship. 
+The final equation is then 
+\begin{equation}\label{LFP_final}
+ \nabla\cdot(\sigma(\mathbf{r})\nabla\phi(\mathbf{r},t)) = -C(\mathbf{r},t)
+\end{equation}
+which is a nonlinear, second order, partial differential equation. It also supports the possibility of $\sigma$ being a tensor.\\
+Equation \ref{LFP_final} lets us relate the LFP to the CSD through the conductivity in the ECS, which is a quantity we will need to estimate. 
+Through equation \ref{sigma} we have related it to the diffusion constant (tensor), which is a quantity that is somewhat simpler to measure.
 
 \section{Mathematical models}
 Diffusion in the ECS is, naturally, modelled by a diffusion equation, but rather a modified one than the basic diffusion equation \ref{diffusion_eq}. 
@@ -131,7 +159,17 @@ The ECS was modeled as the gaps between geometric figures, starting with cubes a
 The models all have a regular spacing in common. \\
 In their simulations Hrab\v{e}tov\'{a} and Nicholson found that the tortuosity reached a maximum of $\lambda_g(\alpha=0) = \sqrt{3/2}\approx 1.225$, which is substantially different from the normal value of $\lambda = 1.6$. 
 These results suggest that other effects than geometric hindrance must be considered in the explanation of the effective diffusion constant. 
-Personally I suspect that the observed maximum tortuosity comes from the regular geometry used in the simulations, and I have tested this hypothesis by the means of molecular dynamics (see section \ref{MD}). 
+Personally I suspect that the observed maximum tortuosity comes from the regular geometry used in the simulations, and I have tested this hypothesis by the means of molecular dynamics (see section \ref{MD}). \\
+I first measured the self-diffusion constant of a liquid at some temperature and density, and later measured the self-diffusion constant of a liquid of the same density at the same temperature in a nanoporous matrix. 
+The, using the definition of tortuosity $\lambda = \sqrt{\frac{D}{D^*}}$ I got $\lambda \simeq 1.41$. 
+This is not 1.6 which it should be, but it is still larger than the estimated maximum value of $\lambda \leq 1.225$, and this is a rather rough estimate. 
+The self-diffusion constant was measured using the einstein relation \ref{einstein}, averaging the rms displacement of all moveable atoms.
+\begin{figure}[H]
+ \centering
+%  \includegraphics[]{×}
+ \caption{}
+ \label{geometries}
+\end{figure}
 
 
 \section{Measurement techniques for brain diffusion characteristics}
