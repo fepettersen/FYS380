@@ -25,11 +25,18 @@
 \maketitle
 % \titlepage
 
-\begin{abstract}
-This is a project in computational neuroscience based on some 8 articles describing various aspects of diffusion in the extracellular space of the brain. 
-\end{abstract}
+% \begin{abstract}
+% 
+% \end{abstract}
 \tableofcontents
 \newpage
+\section{Introduction}
+This is a project in computational neuroscience based on some 8 articles describing various aspects of diffusion in the extracellular space of the brain. 
+The aim of the project is more or less to be an introduction into the models describing diffusion processes in the Extracellular space of the brain, a space in which many important processes takes place. 
+Among them are the delivery of nutrients and drugs to the brain-cells (specified later), as well as ion transport essential to the communication processes between brain-cells. 
+The project starts with a brief introduction to neuroscience on general, also motivating the theme, before summing up the most important models and measurement techniques availible (in the early 2000's). 
+We will also point out some other fields of modern physics that are quite similar to the problem at hand.
+
 \section{Background material}
 For all practical purposes, the brain of a rat is considered equal to the brain of a human in this project.
 \subsection{Basics of the brain}
@@ -268,7 +275,11 @@ We will then have a matrix of stationary atoms, simulating a wall (note that the
 
 \section{Outlook}
 As should now be apparent, diffusion in the ECS is a complex problem which is not fully understood. 
-My 
+In my oppinion the mathematical models are getting close to their explanatory limit while still being relatively intuitive. 
+I base this assumption on the observed maximum value of the tortuosity of $\lambda\leq 1.225$, and assume that a sufficent model of $\lambda$ will be rather complex in the existing framework. 
+My suggestion is then to employ a combination of models of multiple length-scales, say the diffusion equation \ref{modified_diffusion} for larger length scales, and some sort of other model for the tortuosity based on smaller scale pysics. 
+These models could be based on molecular dynamics, random walks, or something else. 
+There are already techniques availible for multi-scale simulations, but these are not nececarily very good and will probably need to be tailored to the task.
 % Figure - subfigure template (2 by 2 subfigures)
 % \begin{figure}[H]
 % \centering
