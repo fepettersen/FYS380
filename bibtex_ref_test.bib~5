@@ -22,3 +22,25 @@
 	year = "2002"
 }
 
+@article{sykova2008diffusion,
+	author = "Sykov{\'a}, Eva and Nicholson, Charles",
+	journal = "Physiological reviews",
+	number = "4",
+	pages = "1277--1340",
+	publisher = "Am Physiological Soc",
+	title = "Diffusion in brain extracellular space",
+	volume = "88",
+	year = "2008"
+}
+
+@article{le2001diffusion,
+	author = "{Le Bihan}, Denis and Mangin, Jean-Fran\c{c}ois and Poupon, Cyril and Clark, Chris A and Pappata, Sabina and Molko, Nicolas and Chabriat, Hughes",
+	journal = "Journal of magnetic resonance imaging",
+	number = "4",
+	pages = "534--546",
+	publisher = "Wiley Online Library",
+	title = "Diffusion tensor imaging: concepts and applications",
+	volume = "13",
+	year = "2001"
+}
+

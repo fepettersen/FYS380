@@ -24,6 +24,7 @@
 \newcommand{\OBDscale}{0.125}
 \newcommand{\rvec}{\textbf{r}}
 \newcommand{\alphavec}{\boldsymbol{\alpha}}
+\renewcommand{\d}{\partial}
 %-----------------------------------------------------%
 
 \newcommand{\subfigure}{\subfloat}
@@ -57,24 +58,145 @@
  \end{figure}
 \end{frame}
 
-\section{Mathematical models}
 \begin{frame}
- \frametitle{Brief introduction to the brain}
+ \frametitle{Cells in the brain}
+ \begin{columns}
+\column{2.0in} Neurons:\\
+\begin{itemize}
+ \item Signal processing
+\end{itemize}
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=\textwidth]{neuron.jpg}
+\end{figure}
+
+\column{2.0in} Neuroglia:\\
+\begin{itemize}
+ \item Janitorial tasks
+\end{itemize}
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=\textwidth]{neuroglia.png}
+\end{figure}
+ \end{columns}
 \end{frame}
 
-\section{Measurement thechniques}
+\begin{frame}
+ \frametitle{The extracellular space}
+ \begin{columns}
+ \column{2.0in}
+ \begin{itemize}
+  \item Space surrounding neurons and neuroglia
+  \item Accounting for $\sim20\%$ of total brain volume
+  \item Important for transport of nutrients, medicines etc.
+ \end{itemize}
+
+\column{2.0in}
+ \begin{figure}[H]
+  \includegraphics[width=\textwidth]{brain.jpg}
+  \caption{Extracellular space marked as dark grey.}
+ \end{figure}
+ \end{columns}
+
+\end{frame}
+
+\section{Mathematical models}
+
+\begin{frame}
+ \frametitle{Basic diffusion}
+ The basic diffusion equation reads
+ \begin{equation}
+  \frac{\d C}{\d t} = D\nabla^2C
+ \end{equation}
+Einstein relations
+\begin{equation}
+ D = \frac{k_B T}{6\pi\eta r}
+\end{equation}
+\begin{equation}
+ \langle r^2\rangle = 2dDt
+\end{equation}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Diffusion in ECS}
+\begin{columns} 
+ \column{2.0in} 
+ Network simulations: \\
+ \begin{itemize}
+  \item Verification against experimental results
+  \item Local field potential
+  \item Extracellular conductance
+ \end{itemize}
+ \begin{equation}
+  \sigma = \frac{cq}{k_B T}D 
+ \end{equation}
+ 
+\column{2.0in}
+\begin{equation*}
+\nabla\cdot(\sigma(\mathbf{r})\nabla\phi(\mathbf{r},t)) = -C(\mathbf{r},t)
+\end{equation*}
+
+\end{columns}
+
+\end{frame}
+
+\begin{frame}
+ \frametitle{Modified diffusion equation}
+ A modified version of the basic diffusion equation is needed to account for 
+ \begin{itemize}
+  \item Sources
+  \item Uptake of diffusing molecules
+  \item evt. bulk flow (absent below)
+ \end{itemize}
+This new equation reads
+\begin{columns}
+\column{2.0in}
+\begin{equation}
+   \frac{\d C}{\d t} = D^*\nabla^2C +\frac{s}{\alpha} -k'C
+\end{equation}
+\column{2.0in}
+\begin{equation}
+ \lambda = \sqrt{\frac{D}{D^*}}
+\end{equation}
+
+\end{columns}
+ \end{frame}
+
  \begin{frame}
- \frametitle{Brief introduction to the brain}
+  \frametitle{Numerical simulations}
+  This will be addressed in the Molecular Dynamics part.
+ \end{frame}
+
+
+\section{Measurement techniques}
+ \begin{frame}
+ \frametitle{Optical measurements}
+\end{frame}
+
+ \begin{frame}
+ \frametitle{TMA$^+$ measurements}
+\end{frame}
+
+ \begin{frame}
+ \frametitle{Radiotracer measurements}
+\end{frame}
+
+ \begin{frame}
+ \frametitle{Diffusion Tensor Imaging}
 \end{frame}
 
 \section{Other possible modeling approaches}
 \begin{frame}
- \frametitle{Brief introduction to the brain}
+ \frametitle{Molecular dynamics}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Random walks}
 \end{frame}
 
 \section{Outlook}
 \begin{frame}
- \frametitle{Brief introduction to the brain}
+ \frametitle{Random walks}
 \end{frame}
 
 \begin{frame}

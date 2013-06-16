@@ -34,7 +34,7 @@
 This is a project in computational neuroscience based on some eight articles describing various aspects of diffusion in the extracellular space of the brain. 
 The aim of the project is more or less to be an introduction to the models describing diffusion processes in the extracellular space of the brain, a space in which many important processes takes place. 
 Among them are the delivery of nutrients and drugs to the brain-cells (specified later), as well as ion transport essential to the communication processes between brain-cells. 
-The project starts with briefly introducing neuroscience in general and motivating the theme, before summing up the most important models and measurement techniques availible (in the early 2000's). 
+The project starts with briefly introducing neuroscience in general and motivating the theme, before summing up the most important models and measurement techniques available (in the early 2000's). 
 We will also point out some other fields of modern physics that are quite similar to the problem at hand.
 
 \section{Background material}
@@ -42,7 +42,7 @@ For all practical purposes, the brain of a rat is considered equal to the brain 
 \subsection{Basics of the brain}
 
 The human brain consists of two types of cells; the neurons and neuroglia. 
-Neurons are tasked with signal processing and transport, while the glia are thought to have more janitoral tasks. 
+Neurons are tasked with signal processing and transport, while the glia are thought to have more janitorial tasks. 
 The neurons are bathed in a salt solution that is mainly $Na^+$ and $Cl^-$. 
 Inside the neurons, a highly regulated salt solution of mainly $K^+$ sets up a potential difference relative to the outside of the cell of approximately $-65$mV.
 The neurons are in constant communication with each other through action potentials, which are disturbances in the membrane potentials of neurons. 
@@ -82,7 +82,7 @@ Where $[D] = \frac{m^2}{s}$ is the diffusion constant. Fick's law leads to the w
  \frac{\d C}{\d t} = D\nabla^2C
 \end{equation}
 
-Einstein later (1905) proposed the most useful relation between the diffusion constant and a fluid viscosity; 
+Einstein later (1905) proposed the very useful relation between the diffusion constant and a fluid viscosity; 
 \begin{equation}\label{einstein_viscosity}
 D = \frac{k_B T}{6\pi \eta r},
 \end{equation}
@@ -93,14 +93,14 @@ The most relevant relation for the study of diffusion in the ECS would be
  \langle r^2\rangle = 2dDt
 \end{equation}
 in the limit of large t (that is in steady state). 
-Equation \ref{einstein} relates the root-mean-square displacement of a particle after a time t (where t is large) in a d dimensional space. 
+Equation (\ref{einstein}) relates the root-mean-square (rms) displacement of a particle after a time t (where t is large) in a d dimensional space (where $d=3$ normally). 
 There are two good reasons to consider the transport mechanisms in the ECS as diffusion processes. 
 Firstly, diffusion goes seamlessly from micro to macro scale. 
-In our case, this is perfect since the channels of the ECS are very narrow, but not nececarily narrow enough to consider all the microscopical effects. 
+In our case, this is perfect since the channels of the ECS are very narrow, but not necessarily narrow enough to consider all the microscopical effects. 
 Second, the geometry of the problem is somewhat similar to diffusion in porous media.\\
 
 \subsection{Why diffusion in the extracellular space}
-Though there are several reasons to study diffusion processes in the ECS this project has a specific goal in mind. 
+Though there are several reasons to study diffusion processes in the ECS, this project has a specific goal in mind. 
 The Einstein relation, eq. (\ref{einstein_viscosity}), relates the diffusion constant to the viscosity of the medium in which the diffusion is taking place. 
 From the definition of viscosity, $\mu$, we have 
 \begin{equation}
@@ -126,7 +126,7 @@ When signals pass through neurons, they will echo into the ECS and create measur
 For a single neuron consisting of N compartments, the LFP is found by summing the contributions from each compartment, as we see from eq. (\ref{LFP_simple}). 
 This formula relies on a set of approximations: The first is the use of the quasistatic approximation of Maxwell's equations, meaning that the electical an magnetic fields are effectively decoupled. 
 This approximation is to a large degree fulfilled for the frequencies inherent in neural activity (less than $\sim 10^3$Hz). 
-Further, the electrical conductivity in the ECS, $\sigma$, is assumed ohmic, frequency independent, homogenous and isotropic, meaning that it is the same in all directions. 
+Further, the electrical conductivity in the ECS, $\sigma$, is assumed ohmic, frequency independent, homogeneous and isotropic, meaning that it is the same in all directions. 
 The last two assumptions can be dropped, making the conductivity a 2. order tensor.
 \begin{equation}\label{LFP_simple}
  \phi(\mathbf{r},t) = \frac{1}{4\pi\sigma}\sum\limits_{n=1}^N\frac{I_n(t)}{|\mathbf{r}-\mathbf{r_n}|}
@@ -147,7 +147,7 @@ Equation (\ref{LFP_final}) lets us relate the LFP to the CSD through the conduct
 Through eq. (\ref{sigma}) we have related it to the diffusion constant (tensor), which is a quantity that is somewhat simpler to measure.
 
 \section{Mathematical models}
-Diffusion in the ECS is, naturally, modeled by a diffusion equation, but rather a modified one than the basic diffusion equation \ref{diffusion_eq}. 
+Diffusion in the ECS is, naturally, modeled by a diffusion equation, but a modified one rather than the basic diffusion equation \ref{diffusion_eq}. 
 Since the geometry of the ECS is very narrow, molecules diffusing in this space will not be subject to free diffusion, as the normal diffusion equation assumes. 
 The diffusing molecules will bounce off cell membranes (we are now considering macromolecules on such a scale that speaking off a cell membrane makes sense) and other molecules. 
 There may even be molecules absorbed by cells, getting stuck onto membranes or going through similar processes. 
@@ -155,7 +155,8 @@ We therefore see it fit to introduce a modified version of the diffusion equatio
 \begin{equation}\label{modified_diffusion}
   \frac{\d C}{\d t} = D^*\nabla^2C +\frac{s}{\alpha} -k'C
 \end{equation}
-Where we have introduced an effective diffusion constant $D^*$ defined from the tortuosity, $\lambda = \sqrt{\frac{D}{D^*}}$, which is a parameter saying something about the reduction in the diffusion constant compared to free diffusion (usually measured in a low percentage agar solution in water). 
+Where we have introduced an effective diffusion constant $D^*$ defined from the tortuosity, $\lambda = \sqrt{\frac{D}{D^*}}$, which is a parameter saying something about the reduction in the diffusion 
+constant compared to free diffusion (usually measured in a low percentage agar solution in water). 
 The tortuosity can also be interpreted as a measure of the ``twistyness'' of the media in which the diffusion is taking place. 
 The relative volume fraction the ECS accounts for is defined as $\alpha$, s is a source term, and the $k'C$ term models the uptake of the diffusing molecules by cell membranes and other processes which might remove diffusing molecules from the system. 
 Note that eq. (\ref{modified_diffusion}) is only one of several possible equations used to model this kind of diffusion, and that terms accounting for the (now assumed absent \cite{nicholson2001diffusion}) bulk flow in the ECS, and other possibly contributing terms, are not included. 
@@ -195,7 +196,8 @@ The self-diffusion constant was measured using the Einstein relation, eq. (\ref{
 
 \section{Measurement techniques for brain diffusion characteristics}
 Measurement of the diffusion constant in the ECS can be done in 4 different ways, where one has the obvious advantage of not having to remove the brain from the skull. 
-For in vitro measurements there main types of measurement are optical, and ion-sensitive micro-probes. 
+For in vitro measurements the main types of measurement are optical, and ion-sensitive micro-probes. 
+In vivo measurements is made possible by a modified form of magnetic resonance imaging (MRI), usually diffusion tensor imaging. These are non-invasive methods which make them applicable on humans.
 
 \subsection{Optical measurements}
 In 1993 Nicholson and Tao developed a new method, the integrative optical imaging (IOI) method, to measure diffusion properties in the ECS \cite{nicholson2001diffusion,nicholson1993hindered}.
@@ -206,7 +208,7 @@ A comparison with unhindered diffusion is required, as is the case for the TMA m
 The IOI method has proved to work rather well, but it has one fundamental problem to overcome; the camera only takes pictures in 2d, and hence the slices used for these measurements must be optically thin. 
 A further complication is that the diffusion should happen in 3d, but will be limited. 
 On a brighter note, the uptake term in equation \ref{modified_diffusion} is assumed to be zero ($k' = 0$) since the molecules are so large.\\
-Today, there has been some research done on further developing the IOI method by replacing the traditional fluorescent dyes or molecules with quantum dots that label the tracer molecules \cite{dahan2003diffusion}. 
+There has been some research done on further developing the IOI method by replacing the traditional fluorescent dyes or molecules with quantum dots that label the tracer molecules \cite{dahan2003diffusion}. 
 The main advantages of using quantum dots as fluorescent tags are: Reduced photobleaching, which is the loss of fluorescence that occurs when dye molecules are exposed to light. 
 Tunable emission spectra; the emitted frequency from a quantum dot is inversely proportional to its size meaning that one can chose the color of the probe. 
 Finally, a quantum dot will also be brighter than normal fluorescent dyes.
@@ -250,19 +252,23 @@ The diffusion tensor is given in \ref{diffuion_tensor}. We notice that it must b
                     \end{array}\right)
 \end{align}
 
-DTI measures the self diffusion tensor of water molecules in the ECS using six or more gradients. 
+DTI measures the self diffusion tensor of water molecules in the ECS using six or more gradients. \\
+From the DTI measurements it is possible to directly calculate the entire conductivity tensor, $\sigma$, using a relation derived by Tuch et. all. in 2001 \cite{tuch2001conductivity}. 
+The mathematics are rather advanced, but the result was a linear relation between the diffusion and conductivity tensor. \\
+There is one large problem with using DTI to measure diffusion and conductivity properties in the ECS, namely that the measured values are not from the ECS. 
+It is possible to use some tricks to get an estimate of the wanted properties, but this will still be indirect measurements.
 
 \section{Other possible modeling approaches}
 In this part we will briefly look to other fields of study which might have similar problems to solve. 
 The main issues of the established models for simulating diffusion in the ECS is the length scale on which it happens. 
-The einstein relation is (to my knowledge) only derived for homogenous media, which means that the mean free path for a diffusing molecule must be much larger than the size of the molecule. 
-It the ECS we are typically in a grey area with respect to the validity of the homogenous media assumption. \\
+The Einstein relation is (to my knowledge) only derived for homogeneous media, which means that the mean free path for a diffusing molecule must be much larger than the size of the molecule. 
+It the ECS we are typically in a gray area with respect to the validity of the homogeneous media assumption. \\
 There are, however, some fields which operate with similar geometries within numerical statistical mechanics, and we will look closer at two possibly relevant fields here.
 
 \subsection{Random walks/flow on a percolating cluster}
 Percolation theory is the study of connectivity in random media. There are ways to study percolation, in this project we will only look briefly at the basics. The theory will be described in 2d, but it is trivially generalized to 3 or more dimensions.\\
 We typically start with a matrix of random numbers drawn from the uniform distribution, and pick some porosity, $p\in[0,1]$. 
-For each site (entry) $e_{ij}$ in the matrix we will now say that it is occupied if $e_{ij} \leq p$ and that two occupied sites are connected if they are neighbours (depending on what kind of neighbouring criteria we want). 
+For each site (entry) $e_{ij}$ in the matrix we will now say that it is occupied if $e_{ij} \leq p$ and that two occupied sites are connected if they are neighbors (depending on what kind of neighboring criteria we want). 
 This gives us clusters of connected, occupied sites with complex geometries, see Figure \ref{perc}. 
 If a cluster stretches from one side of the matrix to the other we say that we have percolation, and call that cluster the percolating cluster. 
 Now, there are many interesting aspects of this kind of system in itself, but we would like to model diffusion in the ECS with this kind of system. 
@@ -298,37 +304,11 @@ The problem with applying molecular dynamics on our diffusion in ECS problem is 
 \section{Outlook}
 As should now be apparent, diffusion in the ECS is a complex problem which is not fully understood. 
 In my opinion the mathematical models are getting close to their explanatory limit while still being relatively intuitive. 
-I base this assumption on the observed maximum value of the tortuosity of $\lambda\leq 1.225$, and assume that a sufficent model of $\lambda$ will be rather complex in the existing framework. 
+I base this assumption on the observed maximum value of the tortuosity of $\lambda\leq 1.225$, and assume that a sufficient model of $\lambda$ will be rather complex in the existing framework. 
 My suggestion is then to employ a combination of models of multiple length-scales, say the diffusion equation \ref{modified_diffusion} for larger length scales, and some other model for the tortuosity based on smaller scale pysics. 
 These models could be based on molecular dynamics, random walks, or something else. 
 There are already techniques available for multi-scale simulations, but these are not necessarily very good and will probably need to be tailored to the task.
-% Figure - subfigure template (2 by 2 subfigures)
-% \begin{figure}[H]
-% \centering
-%   \begin{subfigure}[b]{0.48\textwidth}
-%     \includegraphics[width=\textwidth]{filename}
-%     \caption{small caption}
-%     \label{KM:age}
-%   \end{subfigure}
-%   \begin{subfigure}[b]{0.48\textwidth}
-%     \includegraphics[width=\textwidth]{filename.png}
-%     \caption{small caption}
-%     \label{KM:treat}
-%   \end{subfigure}
-%   
-%   \begin{subfigure}[b]{0.48\textwidth}
-%    \includegraphics[width=\textwidth]{filename.png}
-%    \caption{small caption}
-%    \label{KM:asc}
-%   \end{subfigure}
-%   \begin{subfigure}[b]{0.48\textwidth}
-%    \includegraphics[width=\textwidth]{filename.png}
-%    \caption{small caption}
-%    \label{KM:sex}
-%   \end{subfigure}
-%   \caption{some caption}
-%   \label{KM}
-% \end{figure}
+
 
 \printbibliography
 \end{document}

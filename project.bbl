@@ -170,6 +170,34 @@
   \field{year}{2001}
 \endentry
 
+\entry{nicholson1981ion}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Nicholson}{N.}%
+     {Ch}{C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Phillips}{P.}%
+     {JM}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Physiological Soc}%
+  }
+  \strng{namehash}{NCPJ1}
+  \strng{fullhash}{NCPJ1}
+  \field{sortinit}{N}
+  \field{number}{1}
+  \field{pages}{225\bibrangedash 257}
+  \field{title}{{Ion diffusion modified by tortuosity and volume fraction in
+  the extracellular microenvironment of the rat cerebellum.}}
+  \field{volume}{321}
+  \field{journaltitle}{The Journal of Physiology}
+  \field{year}{1981}
+\endentry
+
 \entry{nicholson2001diffusion}{article}{}
   \name{author}{1}{}{%
     {{}%
@@ -251,6 +279,49 @@
   \field{sortinit}{S}
   \field{title}{{Principles of computational modelling in neuroscience}}
   \field{year}{2011}
+\endentry
+
+\entry{tuch2001conductivity}{article}{}
+  \name{author}{5}{}{%
+    {{}%
+     {Tuch}{T.}%
+     {David~S}{D.~S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Wedeen}{W.}%
+     {Van~J}{V.~J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Dale}{D.}%
+     {Anders~M}{A.~M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {George}{G.}%
+     {John~S}{J.~S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Belliveau}{B.}%
+     {John~W}{J.~W.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {National Acad Sciences}%
+  }
+  \strng{namehash}{TDS+1}
+  \strng{fullhash}{TDSWVJDAMGJSBJW1}
+  \field{sortinit}{T}
+  \field{number}{20}
+  \field{pages}{11697\bibrangedash 11701}
+  \field{title}{{Conductivity tensor mapping of the human brain using diffusion
+  tensor MRI}}
+  \field{volume}{98}
+  \field{journaltitle}{Proceedings of the National Academy of Sciences}
+  \field{year}{2001}
 \endentry
 
 \lossort

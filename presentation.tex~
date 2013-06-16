@@ -130,7 +130,7 @@ Einstein relations
  \begin{equation}
   \sigma = \frac{cq}{k_B T}D 
  \end{equation}
-
+ 
 \column{2.0in}
 \begin{equation*}
 \nabla\cdot(\sigma(\mathbf{r})\nabla\phi(\mathbf{r},t)) = -C(\mathbf{r},t)
@@ -139,6 +139,33 @@ Einstein relations
 \end{columns}
 
 \end{frame}
+
+\begin{frame}
+ \frametitle{Modified diffusion equation}
+ A modified version of the basic diffusion equation is needed to account for 
+ \begin{itemize}
+  \item Sources
+  \item Uptake of diffusing molecules
+  \item evt. bulk flow (absent below)
+ \end{itemize}
+This new equation reads
+\begin{columns}
+\column{2.0in}
+\begin{equation}
+   \frac{\d C}{\d t} = D^*\nabla^2C +\frac{s}{\alpha} -k'C
+\end{equation}
+\column{2.0in}
+\begin{equation}
+ \lambda = \sqrt{\frac{D}{D^*}}
+\end{equation}
+
+\end{columns}
+ \end{frame}
+
+ \begin{frame}
+  \frametitle{Numerical simulations}
+  This will be addressed in the Molecular Dynamics part.
+ \end{frame}
 
 
 \section{Measurement techniques}

@@ -47,7 +47,7 @@ The neurons are bathed in a salt solution that is mainly $Na^+$ and $Cl^-$.
 Inside the neurons, a highly regulated salt solution of mainly $K^+$ sets up a potential difference relative to the outside of the cell of approximately $-65$mV.
 The neurons are in constant communication with each other through action potentials, which are disturbances in the membrane potentials of neurons. 
 These action potentials are generated in the body of the cell, called the soma, from where they propagate down the axon without loss of amplitude. 
-This is achieved by constantly amplifying the signal using ion pumps (see the Hodgin-Huxley model of the action potential).
+This is achieved by constantly amplifying the signal using ion pumps (see the Hodgin-Huxley model of the action potential \cite{sterratt2011principles}).
 After propagating down the axon, the action potential reaches a synapse which is a gate to another neuron. 
 If the action potential is of significant strength, vesicles carrying neurotransmitters merge with the synapse membrane, letting the neurotransmitters diffuse to the dendrite of the other neuron. 
 If enough neurotransmitters reach the post-synaptic side, the signal continues propagating to the soma of this neuron, and the entire process starts over again. \\
@@ -62,7 +62,7 @@ Since the cells consists of axons and dendrites which can be viewed as (somewhat
  \includegraphics[width=\textwidth]{brain.png}
  \caption{Electron micrograph of a small region of the cerebral cortex of a rat with a prominent synapse. 
  The black areas of the picture indicate the ECS, which may be reduced in size as a consequence of the processing which prepare the sample for the micrograph. 
- The asterix (*) indicates the postsynaptic side of a synapse on a dendrite. 
+ The asterix (*) indicates the post-synaptic side of a synapse on a dendrite. 
  On the other side of the synaptic cleft one can make out the pre-synaptic terminal containing several small, round vesicles filled with neurotransmitter molecules. 
  The scale bar under the figure indicates a distance of about 1$\mu$m. 
  Figure taken from Nicholson \cite{nicholson2001diffusion}.}
@@ -206,7 +206,10 @@ A comparison with unhindered diffusion is required, as is the case for the TMA m
 The IOI method has proved to work rather well, but it has one fundamental problem to overcome; the camera only takes pictures in 2d, and hence the slices used for these measurements must be optically thin. 
 A further complication is that the diffusion should happen in 3d, but will be limited. 
 On a brighter note, the uptake term in equation \ref{modified_diffusion} is assumed to be zero ($k' = 0$) since the molecules are so large.\\
-Today, there has been some research done on further developing the IOI method (not necessarily for neuroscience) by replacing the traditional fluorescent 
+Today, there has been some research done on further developing the IOI method by replacing the traditional fluorescent dyes or molecules with quantum dots that label the tracer molecules \cite{dahan2003diffusion}. 
+The main advantages of using quantum dots as fluorescent tags are: Reduced photobleaching, which is the loss of fluorescence that occurs when dye molecules are exposed to light. 
+Tunable emission spectra; the emitted frequency from a quantum dot is inversely proportional to its size meaning that one can chose the color of the probe. 
+Finally, a quantum dot will also be brighter than normal fluorescent dyes.
 
 \subsection{TMA$^+$ measurements}
 All TMA measurements are usually done on brain slices kept under well controlled conditions. 
@@ -277,7 +280,7 @@ Percolation theory tells us that as the porosity (analogous to $\alpha$) increas
 \end{figure}
 
 \subsection{Molecular dynamics}\label{MD}
-Molecular dynamics is the simulation of the dynamics of atoms and molecules using classical, newtonian mechanics in the sense that the molecules are affected by a potential, and that the sum of forces describes the dynamics. 
+Molecular dynamics is the simulation of the dynamics of atoms and molecules using classical, Newtonian mechanics in the sense that the molecules are affected by a potential, and that the sum of forces describes the dynamics. 
 Their dynamics are then integrated forward in time, and used to describe for example flow in nanoporous media. 
 This means that the system is fully described by the position and velocities of all the atoms. 
 Again, there is a vast variety in the level of complexity here and we will only look at the simplest example, namely the Lennard-Jones potential, eq. (\ref{LJ}). 
@@ -288,7 +291,9 @@ The Lennard-Jones potential is derived to simulate Argon in the Van Der Waals eq
  U = 4\epsilon\left[\left(\frac{\sigma}{r}\right)^{12}-\left(\frac{\sigma}{r}\right)^{6}\right]
 \end{equation}
 It is possible to do simulations of flow in nanoporous materials using the Lennard-Jones potential, although it is a far from perfect model, by only allowing some of the atoms to move. 
-We will then have a matrix of stationary atoms, simulating a wall (note that there will still be forces acting from these atoms), and a liquid inside this matrix.
+We will then have a matrix of stationary atoms, simulating a wall (note that there will still be forces acting from these atoms), and a liquid inside this matrix. \\
+The problem with applying molecular dynamics on our diffusion in ECS problem is the need for a potential that describes the system. 
+
 
 \section{Outlook}
 As should now be apparent, diffusion in the ECS is a complex problem which is not fully understood. 
@@ -297,33 +302,7 @@ I base this assumption on the observed maximum value of the tortuosity of $\lamb
 My suggestion is then to employ a combination of models of multiple length-scales, say the diffusion equation \ref{modified_diffusion} for larger length scales, and some other model for the tortuosity based on smaller scale pysics. 
 These models could be based on molecular dynamics, random walks, or something else. 
 There are already techniques available for multi-scale simulations, but these are not necessarily very good and will probably need to be tailored to the task.
-% Figure - subfigure template (2 by 2 subfigures)
-% \begin{figure}[H]
-% \centering
-%   \begin{subfigure}[b]{0.48\textwidth}
-%     \includegraphics[width=\textwidth]{filename}
-%     \caption{small caption}
-%     \label{KM:age}
-%   \end{subfigure}
-%   \begin{subfigure}[b]{0.48\textwidth}
-%     \includegraphics[width=\textwidth]{filename.png}
-%     \caption{small caption}
-%     \label{KM:treat}
-%   \end{subfigure}
-%   
-%   \begin{subfigure}[b]{0.48\textwidth}
-%    \includegraphics[width=\textwidth]{filename.png}
-%    \caption{small caption}
-%    \label{KM:asc}
-%   \end{subfigure}
-%   \begin{subfigure}[b]{0.48\textwidth}
-%    \includegraphics[width=\textwidth]{filename.png}
-%    \caption{small caption}
-%    \label{KM:sex}
-%   \end{subfigure}
-%   \caption{some caption}
-%   \label{KM}
-% \end{figure}
+
 
 \printbibliography
 \end{document}

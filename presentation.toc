@@ -6,8 +6,8 @@
 \defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {2}{Mathematical models}{6}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {3}{Measurement techniques}{8}{0}{3}
+\beamer@sectionintoc {3}{Measurement techniques}{10}{0}{3}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {4}{Other possible modeling approaches}{12}{0}{4}
+\beamer@sectionintoc {4}{Other possible modeling approaches}{14}{0}{4}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {5}{Outlook}{14}{0}{5}
+\beamer@sectionintoc {5}{Outlook}{16}{0}{5}
