@@ -44,6 +44,54 @@
   \field{year}{2002}
 \endentry
 
+\entry{dahan2003diffusion}{article}{}
+  \name{author}{6}{}{%
+    {{}%
+     {Dahan}{D.}%
+     {Maxime}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Levi}{L.}%
+     {Sabine}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Luccardini}{L.}%
+     {Camilla}{C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Rostaing}{R.}%
+     {Philippe}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Riveau}{R.}%
+     {Beatrice}{B.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Triller}{T.}%
+     {Antoine}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {AAAS}%
+  }
+  \strng{namehash}{DM+1}
+  \strng{fullhash}{DMLSLCRPRBTA1}
+  \field{sortinit}{D}
+  \field{number}{5644}
+  \field{pages}{442}
+  \field{title}{{Diffusion dynamics of glycine receptors revealed by
+  single-quantum dot tracking}}
+  \field{volume}{302}
+  \field{journaltitle}{Science Signaling}
+  \field{year}{2003}
+\endentry
+
 \entry{hrabetova2004contribution}{article}{}
   \true{moreauthor}
   \name{author}{2}{}{%
@@ -63,8 +111,8 @@
   \field{sortinit}{H}
   \field{number}{4}
   \field{pages}{467}
-  \field{title}{Contribution of dead-space microdomains to tortuosity of brain
-  extracellular space.}
+  \field{title}{{Contribution of dead-space microdomains to tortuosity of brain
+  extracellular space.}}
   \field{volume}{45}
   \field{journaltitle}{Neurochemistry international}
   \field{year}{2004}
@@ -116,7 +164,7 @@
   \field{sortinit}{L}
   \field{number}{4}
   \field{pages}{534\bibrangedash 546}
-  \field{title}{Diffusion tensor imaging: concepts and applications}
+  \field{title}{{Diffusion tensor imaging: concepts and applications}}
   \field{volume}{13}
   \field{journaltitle}{Journal of magnetic resonance imaging}
   \field{year}{2001}
@@ -138,7 +186,7 @@
   \field{sortinit}{N}
   \field{number}{7}
   \field{pages}{815}
-  \field{title}{Diffusion and related transport mechanisms in brain tissue}
+  \field{title}{{Diffusion and related transport mechanisms in brain tissue}}
   \field{volume}{64}
   \field{journaltitle}{Reports on progress in Physics}
   \field{year}{2001}
@@ -165,11 +213,44 @@
   \field{sortinit}{N}
   \field{number}{6}
   \field{pages}{2277\bibrangedash 2290}
-  \field{title}{Hindered diffusion of high molecular weight compounds in brain
-  extracellular microenvironment measured with integrative optical imaging}
+  \field{title}{{Hindered diffusion of high molecular weight compounds in brain
+  extracellular microenvironment measured with integrative optical imaging}}
   \field{volume}{65}
   \field{journaltitle}{Biophysical journal}
   \field{year}{1993}
+\endentry
+
+\entry{sterratt2011principles}{book}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Sterratt}{S.}%
+     {David}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Graham}{G.}%
+     {Bruce}{B.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Gillies}{G.}%
+     {Andrew}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Willshaw}{W.}%
+     {David}{D.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Cambridge University Press}%
+  }
+  \strng{namehash}{SD+1}
+  \strng{fullhash}{SDGBGAWD1}
+  \field{sortinit}{S}
+  \field{title}{{Principles of computational modelling in neuroscience}}
+  \field{year}{2011}
 \endentry
 
 \lossort

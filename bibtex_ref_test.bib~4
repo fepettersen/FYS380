@@ -1,0 +1,35 @@
+@comment{x-kbibtex-personnameformatting=<%l><, %f>}
+
+@article{nicholson2001diffusion,
+	author = "Nicholson, Charles",
+	journal = "Reports on progress in Physics",
+	number = "7",
+	pages = "815",
+	publisher = "IOP Publishing",
+	title = "Diffusion and related transport mechanisms in brain tissue",
+	volume = "64",
+	year = "2001"
+}
+
+@article{chen2002measurement,
+	author = "Chen, Kevin C and Nicholson, Charles",
+	journal = "Journal of Neuroscience Methods",
+	number = "1",
+	pages = "97--108",
+	publisher = "Elsevier",
+	title = "{Measurement of diffusion parameters using a sinusoidal iontophoretic source in rat cortex}",
+	volume = "122",
+	year = "2002"
+}
+
+@article{sykova2008diffusion,
+	author = "Sykov{\'a}, Eva and Nicholson, Charles",
+	journal = "Physiological reviews",
+	number = "4",
+	pages = "1277--1340",
+	publisher = "Am Physiological Soc",
+	title = "Diffusion in brain extracellular space",
+	volume = "88",
+	year = "2008"
+}
+

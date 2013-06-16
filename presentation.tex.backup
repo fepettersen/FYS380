@@ -1,0 +1,83 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage{default}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{rotating}
+
+\usepackage[]{biblatex}
+% \bibliography{refs/refs.bib}
+
+% \pdfminorversion=5
+
+%-----------------------------------------------------%
+
+\newcommand{\OP}[1]{{\bf\widehat{#1}}}
+\newcommand{\ket}[1]{\left| #1 \right>}
+\newcommand{\bra}[1]{\left< #1 \right|}
+\newcommand{\braket}[2]{\left\langle #1 | #2\right\rangle}
+\newcommand{\shift}{\vspace{0.5cm}\pause\\}
+\newcommand{\qqq}{\qquad\qquad\qquad}
+\newcommand{\qq}{\qquad\qquad}
+\newcommand{\rot}[1]{\begin{sideways}#1\end{sideways}}
+\newcommand{\OBDscale}{0.125}
+\newcommand{\rvec}{\textbf{r}}
+\newcommand{\alphavec}{\boldsymbol{\alpha}}
+%-----------------------------------------------------%
+
+\newcommand{\subfigure}{\subfloat}
+
+\usetheme{Warsaw}
+\title[Presentation - Computational neuroscience]{Diffusion processes in the extracellular space}
+\author{Fredrik E. Pettersen}
+\date{\today}
+
+
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+
+\begin{frame}
+ \frametitle{Contents}
+ \tableofcontents[hideallsubsections]
+\end{frame}
+
+\section{Introduction}
+\begin{frame}
+ \frametitle{Brief introduction to the brain}
+ \begin{figure}
+  \centering
+  \includegraphics[scale=0.8]{presentation_brain.jpg}
+ \end{figure}
+\end{frame}
+
+\section{Mathematical models}
+\begin{frame}
+ \frametitle{Brief introduction to the brain}
+\end{frame}
+
+\section{Measurement thechniques}
+ \begin{frame}
+ \frametitle{Brief introduction to the brain}
+\end{frame}
+
+\section{Other possible modeling approaches}
+\begin{frame}
+ \frametitle{Brief introduction to the brain}
+\end{frame}
+
+\section{Outlook}
+\begin{frame}
+ \frametitle{Brief introduction to the brain}
+\end{frame}
+
+\begin{frame}
+% \printbibliography
+\end{frame}
+\end{document}

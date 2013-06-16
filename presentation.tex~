@@ -1,0 +1,178 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage{default}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{rotating}
+
+\usepackage[]{biblatex}
+% \bibliography{refs/refs.bib}
+
+% \pdfminorversion=5
+
+%-----------------------------------------------------%
+
+\newcommand{\OP}[1]{{\bf\widehat{#1}}}
+\newcommand{\ket}[1]{\left| #1 \right>}
+\newcommand{\bra}[1]{\left< #1 \right|}
+\newcommand{\braket}[2]{\left\langle #1 | #2\right\rangle}
+\newcommand{\shift}{\vspace{0.5cm}\pause\\}
+\newcommand{\qqq}{\qquad\qquad\qquad}
+\newcommand{\qq}{\qquad\qquad}
+\newcommand{\rot}[1]{\begin{sideways}#1\end{sideways}}
+\newcommand{\OBDscale}{0.125}
+\newcommand{\rvec}{\textbf{r}}
+\newcommand{\alphavec}{\boldsymbol{\alpha}}
+\renewcommand{\d}{\partial}
+%-----------------------------------------------------%
+
+\newcommand{\subfigure}{\subfloat}
+
+\usetheme{Warsaw}
+\title[Presentation - Computational neuroscience]{Diffusion processes in the extracellular space}
+\author{Fredrik E. Pettersen}
+\date{\today}
+
+
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+
+\begin{frame}
+ \frametitle{Contents}
+ \tableofcontents[hideallsubsections]
+\end{frame}
+
+\section{Introduction}
+\begin{frame}
+ \frametitle{Brief introduction to the brain}
+ \begin{figure}
+  \centering
+  \includegraphics[scale=0.8]{presentation_brain.jpg}
+ \end{figure}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Cells in the brain}
+ \begin{columns}
+\column{2.0in} Neurons:\\
+\begin{itemize}
+ \item Signal processing
+\end{itemize}
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=\textwidth]{neuron.jpg}
+\end{figure}
+
+\column{2.0in} Neuroglia:\\
+\begin{itemize}
+ \item Janitorial tasks
+\end{itemize}
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=\textwidth]{neuroglia.png}
+\end{figure}
+ \end{columns}
+\end{frame}
+
+\begin{frame}
+ \frametitle{The extracellular space}
+ \begin{columns}
+ \column{2.0in}
+ \begin{itemize}
+  \item Space surrounding neurons and neuroglia
+  \item Accounting for $\sim20\%$ of total brain volume
+  \item Important for transport of nutrients, medicines etc.
+ \end{itemize}
+
+\column{2.0in}
+ \begin{figure}[H]
+  \includegraphics[width=\textwidth]{brain.jpg}
+  \caption{Extracellular space marked as dark grey.}
+ \end{figure}
+ \end{columns}
+
+\end{frame}
+
+\section{Mathematical models}
+
+\begin{frame}
+ \frametitle{Basic diffusion}
+ The basic diffusion equation reads
+ \begin{equation}
+  \frac{\d C}{\d t} = D\nabla^2C
+ \end{equation}
+Einstein relations
+\begin{equation}
+ D = \frac{k_B T}{6\pi\eta r}
+\end{equation}
+\begin{equation}
+ \langle r^2\rangle = 2dDt
+\end{equation}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Diffusion in ECS}
+\begin{columns} 
+ \column{2.0in} 
+ Network simulations: \\
+ \begin{itemize}
+  \item Verification against experimental results
+  \item Local field potential
+  \item Extracellular conductance
+ \end{itemize}
+ \begin{equation}
+  \sigma = \frac{cq}{k_B T}D 
+ \end{equation}
+
+\column{2.0in}
+\begin{equation*}
+\nabla\cdot(\sigma(\mathbf{r})\nabla\phi(\mathbf{r},t)) = -C(\mathbf{r},t)
+\end{equation*}
+
+\end{columns}
+
+\end{frame}
+
+
+\section{Measurement techniques}
+ \begin{frame}
+ \frametitle{Optical measurements}
+\end{frame}
+
+ \begin{frame}
+ \frametitle{TMA$^+$ measurements}
+\end{frame}
+
+ \begin{frame}
+ \frametitle{Radiotracer measurements}
+\end{frame}
+
+ \begin{frame}
+ \frametitle{Diffusion Tensor Imaging}
+\end{frame}
+
+\section{Other possible modeling approaches}
+\begin{frame}
+ \frametitle{Molecular dynamics}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Random walks}
+\end{frame}
+
+\section{Outlook}
+\begin{frame}
+ \frametitle{Random walks}
+\end{frame}
+
+\begin{frame}
+% \printbibliography
+\end{frame}
+\end{document}
