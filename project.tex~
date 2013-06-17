@@ -219,7 +219,7 @@ Though the method is invasive, it does not have to be done in vitro, but an in v
 Tetramethylammonium (TMA$^+$) is the simplest quaternary ammonium cation consisting of four methyl groups attached to a central nitrogen atom, and is positively charged. 
 Measurements using TMA$^+$ rely on the controlled release of very small amounts of TMA from a micro-pipette (using for example pressure ejection) into the tissue of interest, and measuring the corresponding concentration change some distance away (usually $\sim100\mu$m). 
 The change in concentration is measured by an appropriate ion-selective micro-electrode. 
-Using ion-selective micro-electrodes we can measure the TMA concentration in time as well as space with the real time iontophoresis (RTI) method developed by Nicholson and Phillips in 1981 \cite{} and get a resolution on the order of a minute.\\
+Using ion-selective micro-electrodes we can measure the TMA concentration in time as well as space with the real time iontophoresis (RTI) method developed by Nicholson and Phillips in 1981 \cite{nicholson1981ion} and get a resolution on the order of a minute.\\
 Within the realm of TMA measurements there are a few variations. 
 As suggested, we can measure both the spatial concentration distribution, making an analogous method to the radiotracer method, described below. 
 One can also utilize the RTI methods to get a time resolution as well as a spatial one. 
