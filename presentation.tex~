@@ -313,7 +313,9 @@ This new equation reads
 \end{frame}
 
 \begin{frame}
-Thank you!
+\begin{center}
+ \textbf{Thank you!}
+\end{center}
 % \printbibliography
 \end{frame}
 

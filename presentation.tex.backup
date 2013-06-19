@@ -313,7 +313,9 @@ This new equation reads
 \end{frame}
 
 \begin{frame}
-Thank you!
+\begin{center}
+ \textbf{Thank you!}
+\end{center}
 % \printbibliography
 \end{frame}
 
@@ -340,9 +342,17 @@ Thank you!
 
 \begin{frame}
 \frametitle{Illustration of voxels}
+\begin{columns}
+ \column{2.0in}
 \begin{figure}
  \includegraphics[scale=0.2]{voxels.png}
 \end{figure}
+\column{2.0in}
+\begin{figure}[]
+ \includegraphics[width=\textwidth]{lego_xwing.jpg}
+\end{figure}
+
+\end{columns}
 \end{frame}
 
 \end{document}
