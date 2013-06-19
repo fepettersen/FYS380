@@ -102,12 +102,8 @@
 \headcommand {\slideentry {5}{0}{18}{18/18}{}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {18}{18}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {5}{0}{19}{19/19}{}{0}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {19}{19}}
-\headcommand {\beamer@partpages {1}{19}}
-\headcommand {\beamer@subsectionpages {18}{19}}
-\headcommand {\beamer@sectionpages {18}{19}}
-\headcommand {\beamer@documentpages {19}}
-\headcommand {\def \inserttotalframenumber {19}}
+\headcommand {\beamer@partpages {1}{18}}
+\headcommand {\beamer@subsectionpages {18}{18}}
+\headcommand {\beamer@sectionpages {18}{18}}
+\headcommand {\beamer@documentpages {18}}
+\headcommand {\def \inserttotalframenumber {18}}

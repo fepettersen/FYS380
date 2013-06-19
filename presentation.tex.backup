@@ -205,7 +205,8 @@ This new equation reads
  \frametitle{Diffusion Tensor Imaging}
  \begin{itemize}
   \item Non invasive method based on MRI
-  \item Immensely complicated; I have no idea what I'm doing!
+  \item Offers the entire diffusion tensor, but not necessarily of the ECS
+  \item 
  \end{itemize}
 
 \end{frame}
@@ -284,10 +285,28 @@ This new equation reads
 
 \section{Outlook}
 \begin{frame}
- \frametitle{Random walks}
+ \frametitle{Outlook}
+%   \begin{columns}
+%   \column{2.0in}
+  \begin{itemize}
+   \item Unanswered questions 
+   \begin{itemize}
+    \item limitation of tortuosity
+    \item tortuosity constant for increasing $\alpha$
+   \end{itemize}
+   \item Other modeling methods
+   \item Multi scale models; the best from both worlds?
+  \end{itemize}
+% \column{2.0in}
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=\textwidth]{oppg_a_percmatrix.png}
+%  \end{figure}
+% 
+%  \end{columns}
 \end{frame}
 
-\begin{frame}
-% \printbibliography
-\end{frame}
+% \begin{frame}
+% % \printbibliography
+% \end{frame}
 \end{document}

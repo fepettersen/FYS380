@@ -205,7 +205,14 @@ This new equation reads
  \frametitle{Diffusion Tensor Imaging}
  \begin{itemize}
   \item Non invasive method based on MRI
-  \item Immensely complicated; I have no idea what I'm doing!
+  \item Offers the entire diffusion tensor, but not necessarily of the ECS
+  \item Calculates the gradient of the diffusion tensor in a voxel and reconstructs the tensor using six different gradients
+  \item Method has clear advantages over the other ones, but disadvantages as well
+  \begin{itemize}
+   \item Very complicated machinery required
+   \item Expensive
+  \end{itemize}
+
  \end{itemize}
 
 \end{frame}
@@ -288,7 +295,11 @@ This new equation reads
 %   \begin{columns}
 %   \column{2.0in}
   \begin{itemize}
-   \item Unanswered questions (limitation of tortuosity)
+   \item Unanswered questions 
+   \begin{itemize}
+    \item limitation of tortuosity
+    \item tortuosity constant for increasing $\alpha$
+   \end{itemize}
    \item Other modeling methods
    \item Multi scale models; the best from both worlds?
   \end{itemize}
@@ -301,7 +312,7 @@ This new equation reads
 %  \end{columns}
 \end{frame}
 
-\begin{frame}
-% \printbibliography
-\end{frame}
+% \begin{frame}
+% % \printbibliography
+% \end{frame}
 \end{document}
